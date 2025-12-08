@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
+    int n, average;
     int arr[100];
 
     cout << "Enter number of elements: ";
@@ -19,7 +19,7 @@ int main(){
         sum += arr[i];
     }
 
-    int average = sum / n;
+    average = sum / 5;
 
     cout << "Sum = " << sum << endl;
     cout << "Average = " << average << endl;

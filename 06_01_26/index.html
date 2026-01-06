@@ -1,0 +1,784 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive C++ Linked List Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-code { font-family: 'Fira Code', monospace; }
+    
+    /* Code Highlighting Transition */
+    .line-highlight {
+      background-color: #fef08a; /* yellow-200 */
+      transition: background-color 0.2s ease;
+      width: 100%;
+      display: inline-block;
+    }
+
+    /* Node Animations */
+    .node-enter {
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    
+    @keyframes popIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .arrow-grow {
+      animation: growRight 0.5s ease forwards;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    
+    @keyframes growRight {
+      to { transform: scaleX(1); }
+    }
+
+    /* Pointer Transition */
+    .pointer-badge {
+      transition: all 0.5s ease-in-out;
+    }
+    
+    /* Custom Scrollbar for code and visualizer */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c1c1c1; 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8; 
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-10{left:2.5rem}.left-4{left:1rem}.top-10{top:2.5rem}.top-4{top:1rem}.top-40{top:10rem}.top-8{top:2rem}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mt-1{margin-top:0.25rem}.mr-3{margin-right:0.75rem}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-1{height:0.25rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-screen{height:100vh}.w-1\/3{width:33.333333%}.w-24{width:6rem}.w-px{width:1px}.w-8{width:2rem}.min-w-\[400px\]{min-width:400px}.min-w-max{min-width:max-content}.flex-1{flex:1 1 0%}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.appearance-none{-webkit-appearance:none;appearance:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0{gap:0px}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.whitespace-pre{white-space:pre}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-l-2{border-left-width:2px}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-2{padding-bottom:0.5rem}.pb-20{padding-bottom:5rem}.pl-10{padding-left:2.5rem}.pl-3{padding-left:0.75rem}.pr-2{padding-right:0.5rem}.pt-20{padding-top:5rem}.pl-2{padding-left:0.5rem}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-6{line-height:1.5rem}.tracking-wider{letter-spacing:0.05em}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.accent-blue-600{accent-color:#2563eb}.opacity-0{opacity:0}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-red-600:hover{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}</style></head>
+<body class="bg-gray-50 h-screen flex flex-col text-slate-800 overflow-hidden">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between shadow-sm z-10">
+    <div class="flex items-center gap-3">
+      <div class="bg-blue-600 p-2 rounded-lg text-white">
+        <span class="material-symbols-outlined text-2xl">dataset_linked</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-gray-900">Linked List Visualizer</h1>
+        <p class="text-xs text-gray-500 font-medium">Interactive C++ Execution View</p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+       <button onclick="window.open('https://en.wikipedia.org/wiki/Linked_list', '_blank')" class="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">
+         <span class="material-symbols-outlined text-lg">help</span> Explain Logic
+       </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex overflow-hidden">
+    
+    <!-- LEFT PANEL: CODE VIEW -->
+    <div class="w-1/3 min-w-[400px] border-r border-gray-200 flex flex-col bg-white">
+      <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider flex justify-between items-center">
+        <span>Source Code (C++)</span>
+        <span class="text-[10px] bg-gray-200 px-2 py-0.5 rounded text-gray-600">ReadOnly</span>
+      </div>
+      <div id="code-container" class="flex-1 overflow-y-auto font-code text-xs sm:text-sm leading-6 p-4 bg-white relative"><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-0"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">1</span><span class="text-purple-600 font-bold">#include &lt;iostream&gt;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-1"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">2</span><span>using namespace std;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-2"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">3</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-3"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">4</span><span class="text-blue-600 font-bold">class Node {</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-4"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">5</span><span>  public:</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-5"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">6</span><span class="text-blue-600 font-bold">  int data;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-6"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">7</span><span>  Node* next;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-7"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">8</span><span class="text-blue-600 font-bold">  Node(int val) {</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-8"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">9</span><span>    data = val;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-9"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">10</span><span>    next = NULL;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-10"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">11</span><span>  }</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-11"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">12</span><span>};</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-12"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">13</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-13"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">14</span><span class="text-green-600">// insert at the end</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-14"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">15</span><span class="text-blue-600 font-bold">void insert(Node* &amp;head , int val) {</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-15"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">16</span><span class="text-green-600">  Node* newNode = new Node(val); // Step 1: Create Node</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-16"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">17</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-17"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">18</span><span class="text-green-600">  if(head == NULL) {             // Step 2: Check Head</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-18"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">19</span><span class="text-green-600">    head = newNode;              // Step 3: Assign Head</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-19"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">20</span><span class="text-blue-600 font-bold">    return;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-20"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">21</span><span>  }</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-21"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">22</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-22"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">23</span><span class="text-green-600">  Node* temp = head;             // Step 4: Init Temp</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-23"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">24</span><span class="text-green-600">  while(temp-&gt;next != NULL) {    // Step 5: Traverse</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-24"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">25</span><span>    temp = temp-&gt;next;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-25"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">26</span><span>  }</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-26"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">27</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-27"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">28</span><span class="text-green-600">  temp-&gt;next = newNode;          // Step 6: Link Node</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-28"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">29</span><span>}</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-29"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">30</span><span></span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-30"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">31</span><span class="text-blue-600 font-bold">void display(Node* head) {</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-31"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">32</span><span class="text-green-600">  while(head != NULL) {          // Step 7: Loop Print</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-32"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">33</span><span>    cout &lt;&lt; head-&gt;data &lt;&lt; "-&gt;";</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-33"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">34</span><span>    head = head-&gt;next;</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-34"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">35</span><span>  }</span></div><div class="px-2 py-0.5 whitespace-pre hover:bg-gray-50" id="line-35"><span class="inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]">36</span><span>}</span></div></div>
+    </div>
+
+    <!-- RIGHT PANEL: VISUALIZATION & CONTROLS -->
+    <div class="flex-1 flex flex-col bg-slate-50 relative">
+      
+      <!-- Top Controls -->
+      <div class="bg-white p-4 border-b border-gray-200 shadow-sm flex flex-wrap items-center gap-4 justify-between">
+        <div class="flex items-center gap-2">
+           <div class="relative">
+             <input type="number" id="node-input" value="10" class="pl-3 pr-2 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 w-24 text-sm font-medium" placeholder="Val">
+           </div>
+           <button id="btn-insert" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-sm text-sm font-medium flex items-center gap-2 transition-colors">
+             <span class="material-symbols-outlined text-lg">add_circle</span> Insert
+           </button>
+           <div class="h-6 w-px bg-gray-300 mx-2"></div>
+           <button id="btn-display" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md shadow-sm text-sm font-medium flex items-center gap-2 transition-colors">
+             <span class="material-symbols-outlined text-lg">visibility</span> Display
+           </button>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="flex flex-col">
+             <label for="speed-range" class="text-[10px] uppercase font-bold text-gray-400 mb-0.5">Speed</label>
+             <input type="range" id="speed-range" min="1" max="5" value="3" class="w-24 h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+          </div>
+          <button id="btn-run-main" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md shadow-sm text-sm font-medium flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-lg">play_arrow</span> Run Main()
+          </button>
+          <button id="btn-reset" class="text-gray-500 hover:text-red-600 hover:bg-red-50 p-2 rounded-md transition-colors" title="Reset List">
+            <span class="material-symbols-outlined">restart_alt</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Visualization Area -->
+      <div class="flex-1 relative overflow-auto p-8" id="visualizer-canvas">
+        
+        <!-- Empty State -->
+        <div id="empty-state" class="absolute inset-0 flex flex-col items-center justify-center text-gray-400 pointer-events-none">
+          <span class="material-symbols-outlined text-6xl mb-2 text-gray-300">data_array</span>
+          <p class="text-sm">List is empty (head -&gt; NULL)</p>
+        </div>
+
+        <!-- Nodes Container (Horizontal) -->
+        <div id="nodes-container" class="flex items-start gap-0 min-w-max pt-20 pl-10 pb-20">
+          <!-- Dynamic Nodes will go here -->
+          
+          <!-- Head Pointer (Absolute initially, then tracked) -->
+          <div id="head-pointer" class="pointer-badge absolute top-8 left-10 flex flex-col items-center z-20 hidden">
+             <span class="bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1">HEAD</span>
+             <span class="material-symbols-outlined text-rose-500 text-2xl" style="margin-bottom: -10px;">arrow_downward</span>
+          </div>
+
+          <!-- Temp Pointer -->
+          <div id="temp-pointer" class="pointer-badge absolute top-10 left-10 flex flex-col items-center z-30 transition-all duration-500 hidden opacity-0">
+             <span class="bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1">TEMP</span>
+             <span class="material-symbols-outlined text-amber-500 text-2xl" style="margin-bottom: -10px;">arrow_downward</span>
+          </div>
+          
+           <!-- New Node Pointer -->
+          <div id="new-node-pointer" class="pointer-badge absolute top-40 left-10 flex flex-col items-center z-30 transition-all duration-500 hidden opacity-0">
+             <span class="material-symbols-outlined text-purple-600 text-2xl rotate-180" style="margin-bottom: -4px;">arrow_downward</span>
+             <span class="bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mt-1">newNode</span>
+          </div>
+
+        </div>
+
+        <!-- Status / Tooltip Area -->
+        <div id="status-bar" class="absolute top-4 left-4 bg-white/90 backdrop-blur border border-blue-100 text-blue-800 px-4 py-2 rounded-lg shadow-sm text-sm font-medium hidden">
+          Initializing...
+        </div>
+
+      </div>
+
+      <!-- Console Output -->
+      <div class="bg-gray-900 text-gray-200 p-4 h-48 font-code text-sm border-t border-gray-700 flex flex-col">
+        <div class="flex justify-between items-center mb-2 border-b border-gray-700 pb-2">
+          <span class="text-gray-400 text-xs uppercase tracking-wider">Console Output</span>
+          <button onclick="clearConsole()" class="text-[10px] text-gray-500 hover:text-white uppercase">Clear</button>
+        </div>
+        <div id="console-output" class="flex-1 overflow-y-auto space-y-1">
+          <div class="text-gray-500 italic">// Output will appear here...</div>
+        <div class="font-mono text-xs border-l-2 pl-2 my-1 fade-in border-gray-600 text-gray-400">Visualizer Ready.</div></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // --- 1. Code Definition ---
+    // We break the C++ code into an array of lines to allow specific highlighting.
+    // Index matches line number (0-based for array, but we'll use 1-based logic for display).
+    const rawCode = [
+      '#include <iostream>',
+      'using namespace std;',
+      '',
+      'class Node {',
+      '  public:',
+      '  int data;',
+      '  Node* next;',
+      '  Node(int val) {',
+      '    data = val;',
+      '    next = NULL;',
+      '  }',
+      '};',
+      '',
+      '// insert at the end',
+      'void insert(Node* &head , int val) {',
+      '  Node* newNode = new Node(val); // Step 1: Create Node',
+      '',
+      '  if(head == NULL) {             // Step 2: Check Head',
+      '    head = newNode;              // Step 3: Assign Head',
+      '    return;',
+      '  }',
+      '',
+      '  Node* temp = head;             // Step 4: Init Temp',
+      '  while(temp->next != NULL) {    // Step 5: Traverse',
+      '    temp = temp->next;',
+      '  }',
+      '',
+      '  temp->next = newNode;          // Step 6: Link Node',
+      '}',
+      '',
+      'void display(Node* head) {',
+      '  while(head != NULL) {          // Step 7: Loop Print',
+      '    cout << head->data << "->";',
+      '    head = head->next;',
+      '  }',
+      '}'
+    ];
+
+    // Map logical steps to line numbers (0-based index)
+    const codeLines = {
+      insertFunc: 14,
+      createNewNode: 15,
+      checkHeadNull: 17,
+      assignHead: 18,
+      returnHead: 19,
+      initTemp: 22,
+      checkLoop: 23,
+      advanceTemp: 24,
+      linkNode: 27,
+      displayFunc: 31,
+      displayLoop: 32,
+      displayPrint: 33,
+      displayAdvance: 34
+    };
+
+    // --- 2. State Management ---
+    const nodes = []; // Array of { id, value, element }
+    let isAnimating = false;
+    let nextNodeId = 1;
+    let speedMultiplier = 1; // 1 = slow, 5 = fast
+
+    // --- 3. DOM Elements ---
+    const codeContainer = document.getElementById('code-container');
+    const nodesContainer = document.getElementById('nodes-container');
+    const headPointer = document.getElementById('head-pointer');
+    const tempPointer = document.getElementById('temp-pointer');
+    const newNodePointer = document.getElementById('new-node-pointer');
+    const consoleOutput = document.getElementById('console-output');
+    const statusMsg = document.getElementById('status-bar');
+    const emptyState = document.getElementById('empty-state');
+    
+    // Controls
+    const btnInsert = document.getElementById('btn-insert');
+    const btnDisplay = document.getElementById('btn-display');
+    const btnRunMain = document.getElementById('btn-run-main');
+    const btnReset = document.getElementById('btn-reset');
+    const inputVal = document.getElementById('node-input');
+    const speedRange = document.getElementById('speed-range');
+
+    // --- 4. Initialization ---
+    function initCode() {
+      codeContainer.innerHTML = '';
+      rawCode.forEach((line, index) => {
+        const div = document.createElement('div');
+        div.className = 'px-2 py-0.5 whitespace-pre hover:bg-gray-50';
+        div.id = `line-${index}`;
+        
+        // Line Number
+        const lineNum = document.createElement('span');
+        lineNum.className = 'inline-block w-8 text-gray-400 select-none text-right mr-3 text-[10px]';
+        lineNum.textContent = index + 1;
+        
+        // Code Text
+        const codeText = document.createElement('span');
+        codeText.textContent = line;
+        
+        // Simple Syntax Highlighting (very basic)
+        if(line.includes('//')) codeText.className = 'text-green-600';
+        else if(line.trim().startsWith('#')) codeText.className = 'text-purple-600 font-bold';
+        else if(line.includes('class') || line.includes('void') || line.includes('int') || line.includes('return')) codeText.className = 'text-blue-600 font-bold';
+        
+        div.appendChild(lineNum);
+        div.appendChild(codeText);
+        codeContainer.appendChild(div);
+      });
+    }
+
+    // --- 5. Helper Functions ---
+    
+    // Adjust speed
+    speedRange.addEventListener('input', (e) => {
+      // Logic: slider 1(slow) to 5(fast). 
+      // Delay should decrease as slider increases.
+      // Base delay 1000ms.
+      // 1 -> 1500, 3 -> 800, 5 -> 200
+      const val = parseInt(e.target.value);
+      // Not actually used directly, we access DOM in sleep()
+    });
+
+    function getSleepTime() {
+      const val = parseInt(speedRange.value);
+      const map = {1: 1500, 2: 1200, 3: 800, 4: 400, 5: 100};
+      return map[val];
+    }
+
+    function sleep(ms) {
+      if(ms === undefined) ms = getSleepTime();
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function logToConsole(text, type = 'info') {
+      const p = document.createElement('div');
+      p.className = 'font-mono text-xs border-l-2 pl-2 my-1 fade-in';
+      if(type === 'cmd') {
+        p.className += ' border-blue-500 text-blue-200';
+        p.textContent = `> ${text}`;
+      } else if (type === 'output') {
+        p.className += ' border-green-500 text-green-300 font-bold';
+        p.textContent = text;
+      } else {
+        p.className += ' border-gray-600 text-gray-400';
+        p.textContent = text;
+      }
+      
+      const isScrolledToBottom = consoleOutput.scrollHeight - consoleOutput.clientHeight <= consoleOutput.scrollTop + 1;
+      
+      consoleOutput.appendChild(p);
+      
+      if (isScrolledToBottom) {
+        consoleOutput.scrollTop = consoleOutput.scrollHeight;
+      }
+    }
+
+    function clearConsole() {
+      consoleOutput.innerHTML = '<div class="text-gray-500 italic">// Output cleared</div>';
+    }
+
+    function setStatus(text) {
+      statusMsg.textContent = text;
+      statusMsg.classList.remove('hidden');
+      statusMsg.classList.add('flex');
+    }
+
+    function clearStatus() {
+      statusMsg.classList.add('hidden');
+    }
+
+    let activeLineElement = null;
+    function highlightLine(lineIndex) {
+      if (activeLineElement) {
+        activeLineElement.classList.remove('line-highlight');
+      }
+      const lineEl = document.getElementById(`line-${lineIndex}`);
+      if (lineEl) {
+        lineEl.classList.add('line-highlight');
+        activeLineElement = lineEl;
+        
+        // Auto scroll code view
+        const containerRect = codeContainer.getBoundingClientRect();
+        const lineRect = lineEl.getBoundingClientRect();
+        if (lineRect.bottom > containerRect.bottom || lineRect.top < containerRect.top) {
+           lineEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+
+    function clearHighlight() {
+      if (activeLineElement) {
+        activeLineElement.classList.remove('line-highlight');
+        activeLineElement = null;
+      }
+    }
+
+    // --- 6. Core Logic: Node Creation UI ---
+    
+    function createNodeVisual(val, id) {
+      // Container
+      const nodeWrapper = document.createElement('div');
+      nodeWrapper.id = `node-${id}`;
+      nodeWrapper.className = 'node-enter flex items-center relative mr-2'; // mr-2 for gap
+      
+      // Node Box
+      const nodeBox = document.createElement('div');
+      nodeBox.className = 'flex border-2 border-slate-800 bg-white rounded shadow-md overflow-hidden min-w-[100px] h-[50px] relative z-10';
+      
+      // Data Part
+      const dataPart = document.createElement('div');
+      dataPart.className = 'w-1/2 border-r-2 border-slate-800 flex items-center justify-center bg-blue-50 text-slate-900 font-bold font-code';
+      dataPart.textContent = val;
+      
+      // Next Part
+      const nextPart = document.createElement('div');
+      nextPart.className = 'w-1/2 flex items-center justify-center bg-gray-100 text-gray-400 text-[10px] font-code';
+      nextPart.id = `next-${id}`;
+      nextPart.innerHTML = '<span class="material-symbols-outlined text-sm">close</span>'; // Represents NULL initially
+      
+      nodeBox.appendChild(dataPart);
+      nodeBox.appendChild(nextPart);
+      nodeWrapper.appendChild(nodeBox);
+      
+      // Arrow (Hidden initially, shown when linked)
+      const arrow = document.createElement('div');
+      arrow.className = 'h-0.5 w-12 bg-slate-800 absolute left-full top-1/2 -translate-y-1/2 z-0 hidden';
+      arrow.id = `arrow-${id}`;
+      
+      // Arrow head
+      const arrowHead = document.createElement('div');
+      arrowHead.className = 'absolute right-0 top-1/2 -translate-y-1/2 border-t-4 border-b-4 border-l-8 border-transparent border-l-slate-800';
+      arrow.appendChild(arrowHead);
+      
+      nodeWrapper.appendChild(arrow);
+
+      return nodeWrapper;
+    }
+
+    // --- 7. Interactive Functions ---
+
+    // Disable/Enable buttons during animation
+    function toggleControls(disable) {
+      btnInsert.disabled = disable;
+      btnDisplay.disabled = disable;
+      btnRunMain.disabled = disable;
+      btnReset.disabled = disable;
+      if(disable) {
+        btnInsert.classList.add('opacity-50', 'cursor-not-allowed');
+        btnDisplay.classList.add('opacity-50', 'cursor-not-allowed');
+        btnRunMain.classList.add('opacity-50', 'cursor-not-allowed');
+      } else {
+        btnInsert.classList.remove('opacity-50', 'cursor-not-allowed');
+        btnDisplay.classList.remove('opacity-50', 'cursor-not-allowed');
+        btnRunMain.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    // Helper to position pointers
+    function movePointerToNode(pointerEl, nodeIndex, offsetTop = 0, label = 'TEMP') {
+      const targetNode = nodes[nodeIndex].element.querySelector('div'); // Get the box inside wrapper
+      if(!targetNode) return;
+      
+      // Calculate position relative to container
+      const containerRect = nodesContainer.getBoundingClientRect();
+      const nodeRect = targetNode.getBoundingClientRect();
+      
+      const leftPos = nodeRect.left - containerRect.left + (nodeRect.width / 2) - 20; // Center roughly
+      
+      pointerEl.style.left = `${leftPos}px`;
+      pointerEl.style.opacity = '1';
+      pointerEl.classList.remove('hidden');
+    }
+
+    async function insertNode(val) {
+      if(isAnimating) return;
+      isAnimating = true;
+      toggleControls(true);
+      logToConsole(`insert(head, ${val})`, 'cmd');
+
+      // Highlight function start
+      highlightLine(codeLines.insertFunc);
+      setStatus("Calling insert function...");
+      await sleep();
+
+      // Step 1: Create Node
+      highlightLine(codeLines.createNewNode);
+      setStatus(`Creating new node with data ${val}...`);
+      
+      const nodeId = nextNodeId++;
+      const newNodeEl = createNodeVisual(val, nodeId);
+      
+      // Temporarily place newNode visually separate (simulation)
+      // Actually, we'll append it but style it to look "in limbo" or just append to end of flex container
+      // Since flex container is easier, let's just append it.
+      nodesContainer.appendChild(newNodeEl);
+      
+      // Position "newNode" pointer
+      // Since it's the last child
+      const newNodeIndex = nodes.length; // It will be at this index conceptually
+      
+      // We need to 'fake' the position calculation because it's in the DOM now
+      // Let's scroll to right to see it
+      nodesContainer.scrollLeft = nodesContainer.scrollWidth;
+      
+      // Move newNode pointer to this new element
+      // For calculation, we can just use the element itself directly
+      const rect = newNodeEl.getBoundingClientRect();
+      const containerRect = nodesContainer.getBoundingClientRect();
+      const leftPos = rect.left - containerRect.left + (rect.width/2) - 20;
+      
+      newNodePointer.style.left = `${leftPos}px`;
+      newNodePointer.classList.remove('hidden');
+      newNodePointer.style.opacity = '1';
+      
+      await sleep();
+
+      // Step 2: Check Head
+      highlightLine(codeLines.checkHeadNull);
+      setStatus("Checking if head is NULL...");
+      await sleep();
+
+      if (nodes.length === 0) {
+        // CASE: List Empty
+        emptyState.classList.add('hidden');
+        
+        // Step 3: Head = NewNode
+        highlightLine(codeLines.assignHead);
+        setStatus("Head is NULL. Setting head = newNode.");
+        
+        // Move Head pointer
+        headPointer.classList.remove('hidden');
+        headPointer.style.left = `${leftPos}px`;
+        
+        await sleep();
+        
+        highlightLine(codeLines.returnHead);
+        setStatus("Returning...");
+        await sleep();
+        
+        // Finalize state
+        nodes.push({ id: nodeId, value: val, element: newNodeEl });
+        
+      } else {
+        // CASE: List Not Empty
+        highlightLine(codeLines.initTemp);
+        setStatus("Head not NULL. Initializing temp = head.");
+        
+        // Show Temp at Head (index 0)
+        movePointerToNode(tempPointer, 0);
+        await sleep();
+
+        let currIndex = 0;
+        
+        // Step 4: Loop
+        while(true) {
+          highlightLine(codeLines.checkLoop);
+          setStatus(`Checking temp->next (${nodes[currIndex].value})...`);
+          
+          // Flash the "Next" part of the current node
+          const nextPart = nodes[currIndex].element.querySelector(`[id^='next-']`);
+          nextPart.classList.add('bg-yellow-200');
+          await sleep();
+          nextPart.classList.remove('bg-yellow-200');
+
+          if(currIndex < nodes.length - 1) {
+             // Not last node
+             setStatus("next != NULL. Moving temp forward.");
+             highlightLine(codeLines.advanceTemp);
+             
+             currIndex++;
+             movePointerToNode(tempPointer, currIndex);
+             await sleep();
+          } else {
+             // Last node
+             setStatus("next == NULL. Loop ends.");
+             break;
+          }
+        }
+
+        // Step 5: Link
+        highlightLine(codeLines.linkNode);
+        setStatus("Linking temp->next = newNode.");
+        
+        // 1. Show arrow on current temp node
+        const arrow = nodes[currIndex].element.querySelector(`[id^='arrow-']`);
+        arrow.classList.remove('hidden');
+        arrow.classList.add('arrow-grow'); // Animation class
+        
+        // 2. Update visual representation of 'next' in the box
+        // Ideally we show a memory address, but arrow is enough for visualizer
+        const nextPart = nodes[currIndex].element.querySelector(`[id^='next-']`);
+        nextPart.innerHTML = `<span class="text-[8px] tracking-tighter text-blue-600">0x${(1000 + nodeId).toString(16)}</span>`;
+
+        await sleep();
+        
+        // Add to array
+        nodes.push({ id: nodeId, value: val, element: newNodeEl });
+      }
+
+      // Cleanup pointers
+      tempPointer.style.opacity = '0';
+      newNodePointer.style.opacity = '0';
+      await sleep(500);
+      tempPointer.classList.add('hidden');
+      newNodePointer.classList.add('hidden');
+      clearHighlight();
+      clearStatus();
+      toggleControls(false);
+      isAnimating = false;
+    }
+
+    async function displayList() {
+      if(isAnimating) return;
+      if(nodes.length === 0) {
+        logToConsole("List is empty.", "output");
+        return;
+      }
+      
+      isAnimating = true;
+      toggleControls(true);
+      logToConsole("display(head)", "cmd");
+      
+      highlightLine(codeLines.displayFunc);
+      setStatus("Starting display()...");
+      await sleep();
+
+      // Show console "buffer"
+      let outputBuffer = "";
+      
+      // We reuse head pointer visually or just use temp?
+      // Code uses 'head' variable (pass by value), so let's use a "localHead" pointer visually
+      // For simplicity, we'll reuse the temp pointer style but label it 'head (local)'
+      const displayPointer = tempPointer; // Recycle this div
+      const label = displayPointer.querySelector('span');
+      const originalLabel = label.textContent;
+      label.textContent = "head(local)";
+      label.className = "bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1";
+      
+      movePointerToNode(displayPointer, 0);
+      displayPointer.style.opacity = '1';
+      displayPointer.classList.remove('hidden');
+
+      for(let i=0; i<nodes.length; i++) {
+        highlightLine(codeLines.displayLoop);
+        await sleep();
+
+        highlightLine(codeLines.displayPrint);
+        // Highlight data block
+        const dataPart = nodes[i].element.querySelector('div > div:first-child');
+        dataPart.classList.add('bg-green-200');
+        
+        outputBuffer += nodes[i].value + "->";
+        logToConsole(outputBuffer, 'output'); // Update live
+        
+        await sleep();
+        dataPart.classList.remove('bg-green-200');
+
+        highlightLine(codeLines.displayAdvance);
+        if(i < nodes.length - 1) {
+          movePointerToNode(displayPointer, i+1);
+          await sleep();
+        } else {
+          // Moved to NULL
+          displayPointer.style.left = `${nodesContainer.scrollWidth}px`; // Move off to right
+          displayPointer.style.opacity = '0';
+        }
+      }
+
+      // Loop check fails (head == NULL)
+      highlightLine(codeLines.displayLoop);
+      await sleep();
+
+      // Reset pointer look
+      label.textContent = "TEMP";
+      label.className = "bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1";
+      displayPointer.classList.add('hidden');
+      displayPointer.style.opacity = '0';
+      
+      clearHighlight();
+      clearStatus();
+      toggleControls(false);
+      isAnimating = false;
+    }
+
+    async function runMain() {
+      if(isAnimating) return;
+      logToConsole("Running main()...", "cmd");
+      
+      // Reset first
+      resetList();
+      
+      const values = [10, 20, 30, 40, 50];
+      
+      for(let v of values) {
+        await insertNode(v);
+        // Small pause between ops
+        await sleep(500);
+      }
+      
+      await displayList();
+    }
+
+    function resetList() {
+      nodesContainer.innerHTML = `
+        <div id="head-pointer" class="pointer-badge absolute top-8 left-10 flex flex-col items-center z-20 hidden">
+             <span class="bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1">HEAD</span>
+             <span class="material-symbols-outlined text-rose-500 text-2xl" style="margin-bottom: -10px;">arrow_downward</span>
+        </div>
+        <div id="temp-pointer" class="pointer-badge absolute top-10 left-10 flex flex-col items-center z-30 transition-all duration-500 hidden opacity-0">
+             <span class="bg-amber-500 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mb-1">TEMP</span>
+             <span class="material-symbols-outlined text-amber-500 text-2xl" style="margin-bottom: -10px;">arrow_downward</span>
+        </div>
+        <div id="new-node-pointer" class="pointer-badge absolute top-40 left-10 flex flex-col items-center z-30 transition-all duration-500 hidden opacity-0">
+             <span class="material-symbols-outlined text-purple-600 text-2xl rotate-180" style="margin-bottom: -4px;">arrow_downward</span>
+             <span class="bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm mt-1">newNode</span>
+        </div>
+      `;
+      // Re-fetch pointers
+      // Note: In a real framework (React/Vue) this is cleaner, here we just nuked them so we need to ensure variables still point to something valid or re-query.
+      // Actually, since I bound variables `headPointer` etc to the elements *before* nuking innerHTML, those references are now detached from DOM if I don't be careful.
+      // Better strategy: Remove only node children.
+      
+      // Let's reload page logic slightly differently:
+      // Remove all elements with id starting with 'node-'
+      const nodeEls = document.querySelectorAll('[id^="node-"]');
+      nodeEls.forEach(el => el.remove());
+      
+      nodes.length = 0;
+      nextNodeId = 1;
+      emptyState.classList.remove('hidden');
+      
+      // Hide pointers
+      document.getElementById('head-pointer').classList.add('hidden');
+      document.getElementById('temp-pointer').classList.add('hidden');
+      document.getElementById('new-node-pointer').classList.add('hidden');
+      
+      clearConsole();
+      logToConsole("Memory cleared.", "info");
+    }
+
+    // --- 8. Event Listeners ---
+    btnInsert.addEventListener('click', () => {
+      const val = parseInt(inputVal.value);
+      if(isNaN(val)) return;
+      insertNode(val);
+    });
+
+    btnDisplay.addEventListener('click', () => {
+      displayList();
+    });
+
+    btnRunMain.addEventListener('click', () => {
+      runMain();
+    });
+
+    btnReset.addEventListener('click', resetList);
+
+    // Initial Setup
+    initCode();
+    logToConsole("Visualizer Ready.", "info");
+
+  </script>
+
+
+</body></html>

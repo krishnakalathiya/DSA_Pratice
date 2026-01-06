@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/memory_cal",
-      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/memory_cal/build/Debug/outDebug",
+      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/06_01_26",
+      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/06_01_26/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

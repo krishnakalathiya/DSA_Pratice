@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/dyanamic_allocation_linkedlist",
-      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/dyanamic_allocation_linkedlist/build/Debug/outDebug",
+      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/grid_string",
+      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/grid_string/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

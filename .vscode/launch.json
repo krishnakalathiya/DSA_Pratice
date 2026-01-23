@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/20_1_26",
-      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/20_1_26/build/Debug/outDebug",
+      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/Escalator_pro4",
+      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/Escalator_pro4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

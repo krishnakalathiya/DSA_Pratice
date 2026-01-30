@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/28_01_26",
-      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/28_01_26/build/Debug/outDebug",
+      "cwd": "c:/Users/PC/Documents/GitHub/DSA_Pratice/22_01_26",
+      "program": "c:/Users/PC/Documents/GitHub/DSA_Pratice/22_01_26/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
